@@ -1,0 +1,11 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+
+<!--<a href="{% url 'blog:blog_add' %}">Add Blog </a>-->
+<div class="col-sm-offset-2 col-sm-7">
+<h3>{{ blog.sub_title }}</h3>
+    <hr>
+<h5>{{ blog.body|safe|linebreaks }}</h5>
+</div>
+
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+
+<!--<a href="{% url 'blog:blog_add' %}">Add Blog </a>-->
+<div class="col-sm-offset-2 col-sm-7">
+<h3> List Of Blogs </h3><hr>
+    {% if all_blog %}
+      <ul>
+          {% for blog in all_blog %}
+          <li>
+              <a href="/blog/{{ blog.id }}/">{{ blog.blog_title }}</a>
+          </li>
+          {% endfor %}
+      </ul>
+    {% else %}
+    <h2> sorry </h2>
+{% endif %}
+</div>
+{% endblock %}
